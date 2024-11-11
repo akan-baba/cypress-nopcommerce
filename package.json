@@ -1,0 +1,17 @@
+{
+  "name": "cypress-nopcommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:run": "npx cypress run --env ENV=dev && npx cypress run --env ENV=staging && npx cypress run --env ENV=qa && npx cypress run --env ENV=production",
+    "cypress:open": "npx cypress open --env ENV=qa"
+  },
+  "keywords": [],
+  "author": "Akan Antia",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "cypress": "^13.15.2"
+  }
+}
