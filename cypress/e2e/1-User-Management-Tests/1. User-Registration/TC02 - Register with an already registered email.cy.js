@@ -1,5 +1,5 @@
 import { Environment } from "../../../support/utils/environs";
-import { UserRegistration } from "../../../support/pages/registrationPage";
+import { UserRegistration } from "../../../support/pages/userMgt/registrationPage";
 import { faker } from "@faker-js/faker";
 
 const userRegistration = new UserRegistration();
