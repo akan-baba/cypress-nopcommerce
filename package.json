@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:run": "npx cypress run --env ENV=dev && npx cypress run --env ENV=staging && npx cypress run --env ENV=qa && npx cypress run --env ENV=production",
+    "cypress:run": "npx cypress run --env ENV=live && npx cypress run --env ENV=dev && npx cypress run --env ENV=staging && npx cypress run --env ENV=qa && npx cypress run --env ENV=production",
     "cypress:open": "npx cypress open --env ENV=qa"
   },
   "keywords": [],
