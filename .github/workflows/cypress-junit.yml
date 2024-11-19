@@ -1,0 +1,23 @@
+name: Cypress JUnit Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Run Cypress tests
+        run: npx cypress run
+      - name: Publish JUnit results
+        uses: actions/upload-artifact@v3
+        with:
+          name: junit-results
+          path: results/junit/*.xml

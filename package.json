@@ -3,22 +3,23 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": { 
-  "cypress:run": "npx cypress run --env ENV=dev && npx cypress run --env ENV=staging && npx cypress run --env ENV=qa && npx cypress run --env ENV=production",
-  "cypress:open": "npx cypress open --env allure=true,ENV=qa",
-  "allure:report": "allure generate allure-results --clean -o allure-report",
-  "allure:open": "allure open allure-report",
-  "test:allure": "npm run cypress:run && npm run allure:report && npm run allure:open"
-},
-    
+  "scripts": {
+    "test:mochawesome": "npx cypress run && npx mochawesome-merge cypress/mochawesome-report/*.json > mochawesome-merged.json && npx mochawesome-report-generator mochawesome-merged.json && npx open-cli mochawesome-report/mochawesome.html",
+    "merge:mochawesome": "npx mochawesome-merge cypress/mochawesome-report/*.json > mochawesome-merged.json && npx mochawesome-report-generator mochawesome-merged.json",
+    "open:report": "npx open-cli mochawesome-report/mochawesome.html"
+  },
   "author": "Akan Antia",
   "license": "ISC",
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
-    "@shelex/cypress-allure-plugin": "^2.40.2",
-    "allure-commandline": "^2.32.0",
     "cross-env": "^7.0.3",
     "cypress": "^13.15.2",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-multi-reporters": "^2.0.4",
+    "junit-reporter": "^0.0.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
     "rimraf": "^6.0.1"
   }
 }
