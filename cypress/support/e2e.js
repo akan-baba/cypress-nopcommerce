@@ -20,10 +20,10 @@ app.document.head.appendChild(style);
 }
 
 
-Cypress.on('fail', (error, runnable) => {
-    cy.allure().testBody(error.stack); // Attach error stack to the Allure report
-    throw error; // Still fail the test
-  });
+// Cypress.on('fail', (error, runnable) => {
+//     cy.allure().testBody(error.stack); // Attach error stack to the Allure report
+//     throw error; // Still fail the test
+//   });
 
 
 const skipFailures = (Cypress.env('skipFailures') === 'true');

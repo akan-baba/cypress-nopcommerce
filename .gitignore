@@ -1,2 +1,4 @@
 node_modules
 allure-report
+mochawesome-report
+screenshots
