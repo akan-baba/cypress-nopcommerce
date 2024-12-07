@@ -19,7 +19,7 @@ describe('Desktops', () => {
         cy.selectValueByDataAttr("24", "94");
         cy.selectValueByDataAttr("25", "99");
         cy.selectRadio('Windows 10').click();
-        cy.get('#product_enteredQuantity_2').clear().type('50')
+        cy.get('#product_enteredQuantity_2').clear().type('300')
         cy.addToCart().eq(0).click()
         computers.pageActions.clickShoppingCartLink().click();
         computers.pageActions.clickTermsOfServiceLink().click();
@@ -35,7 +35,7 @@ describe('Desktops', () => {
         cy.selectValueByDataAttr("1", "77");
         cy.selectValueByDataAttr("20", "80");
         cy.selectRadio('Windows 11').click();
-        cy.get('#product_enteredQuantity_1').clear().type('50')
+        cy.get('#product_enteredQuantity_1').clear().type('550')
         cy.addToCart().eq(0).click()
         computers.pageActions.clickShoppingCartLink().click();
         computers.pageActions.clickTermsOfServiceLink().click();
@@ -50,7 +50,7 @@ describe('Desktops', () => {
         cy.selectValueByDataAttr("29", "113");
         cy.selectValueByDataAttr("30", "118");
         cy.selectRadio('Windows 11').click();
-        cy.get('#product_enteredQuantity_3').clear().type('50')
+        cy.get('#product_enteredQuantity_3').clear().type('250')
         cy.addToCart().eq(0).click()
         computers.pageActions.clickShoppingCartLink().click();
         computers.pageActions.clickTermsOfServiceLink().click();
