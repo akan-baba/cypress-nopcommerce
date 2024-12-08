@@ -53,3 +53,28 @@
     cy.get('.button-1.confirm-order-next-step-button').click();
     cy.get("div[class='section order-completed'] div[class='title'] strong").should('be.visible', 'Your order has been successfully processed!');
    });
+
+
+   Cypress.Commands.add("customerLogin", () => {
+    cy.fixture('users').then((users) => {
+      cy.get('.ico-login').click()
+      // Select a random user from the array
+      const randomUser = users[Math.floor(Math.random() * users.length)];
+  
+      // Perform login with the selected user
+      cy.get('#Username').type(randomUser.Username);
+      cy.get('#Password').type(randomUser.password);
+      cy.get("button[class='button-1 login-button']").click();
+      
+    });
+  });
+  
+  Cypress.Commands.add("registeredUserCheckout", () => {
+    cy.get('#billing-buttons-container > .new-address-next-step-button').click()
+    cy.get('#shipping-method-buttons-container > .button-1').click()
+    cy.get('#payment-method-buttons-container > .button-1').click()
+    cy.get('#payment-info-buttons-container > .button-1').click()
+    cy.get('#confirm-order-buttons-container > .button-1').click()
+    cy.get('.section > .title > strong').should('be.visible', 'Your order has been successfully processed!');
+    
+  });

@@ -4,15 +4,13 @@ const baseUrl = Environment.getBaseUrl();
 const computers = new Computers();
 
 
-describe('', () => {
-    beforeEach(() => {
+describe('Laptop Basket', () => {
+
+    it('Acer Aspire 3 A315-44P Laptop', () => {
         cy.visit(baseUrl);
         computers.pageActions.clickComputersLink().click({ force: true })
         computers.pageActions.clickLaptopsLink().click({ force: true })
-
-    });
-
-    it('Acer Aspire 3 A315-44P Laptop', () => {
+        cy.customerLogin()
         cy.addToCart().eq(0).click();
         cy.selectValueByDataAttr("39", "149");
         cy.selectValueByDataAttr("40", "153");
@@ -24,10 +22,14 @@ describe('', () => {
         computers.pageActions.clickShoppingCartLink().click();
         computers.pageActions.clickTermsOfServiceLink().click();
         computers.pageActions.clickCheckOutBtn().click();
-        cy.checkoutAsGuest()
+        cy.registeredUserCheckout()
     });
 
     it('Inspiron 15 Laptop', () => {
+        cy.visit(baseUrl);
+        computers.pageActions.clickComputersLink().click({ force: true })
+        computers.pageActions.clickLaptopsLink().click({ force: true })
+        cy.customerLogin()
         cy.addToCart().eq(3).click();
         cy.selectValueByDataAttr("44", "168");
         cy.selectValueByDataAttr("45", "172");
@@ -39,10 +41,14 @@ describe('', () => {
         computers.pageActions.clickShoppingCartLink().click();
         computers.pageActions.clickTermsOfServiceLink().click();
         computers.pageActions.clickCheckOutBtn().click();
-        cy.checkoutAsGuest()
+        cy.registeredUserCheckout()
     });
 
     it('Lenovo ThinkCentre M70s Gen 4', () => {
+        cy.visit(baseUrl);
+        computers.pageActions.clickComputersLink().click({ force: true })
+        computers.pageActions.clickLaptopsLink().click({ force: true })
+        cy.customerLogin()
         cy.addToCart().eq(4).click();
         cy.selectValueByDataAttr("1039", "1149");
         cy.selectValueByDataAttr("1040", "1154");
@@ -54,10 +60,14 @@ describe('', () => {
         computers.pageActions.clickShoppingCartLink().click();
         computers.pageActions.clickTermsOfServiceLink().click();
         computers.pageActions.clickCheckOutBtn().click();
-        cy.checkoutAsGuest()
+        cy.registeredUserCheckout()
     });
 
     it('HP Spectre XT Pro UltraBook', () => {
+        cy.visit(baseUrl);
+        computers.pageActions.clickComputersLink().click({ force: true })
+        computers.pageActions.clickLaptopsLink().click({ force: true })
+        cy.customerLogin()
         cy.addToCart().eq(2).click();
         cy.selectValueByDataAttr("1044", "1169");
         cy.selectValueByDataAttr("1045", "1172");
@@ -69,10 +79,14 @@ describe('', () => {
         computers.pageActions.clickShoppingCartLink().click();
         computers.pageActions.clickTermsOfServiceLink().click();
         computers.pageActions.clickCheckOutBtn().click();
-        cy.checkoutAsGuest()
+        cy.registeredUserCheckout()
     });
 
     it('HP Envy 17 Touchscreen Laptop - Core™ Ultra 5', () => {
+        cy.visit(baseUrl);
+        computers.pageActions.clickComputersLink().click({ force: true })
+        computers.pageActions.clickLaptopsLink().click({ force: true })
+        cy.customerLogin()
         cy.addToCart().eq(1).click();
         cy.selectValueByDataAttr("1049", "1187");
         cy.selectValueByDataAttr("1050", "1191");
@@ -84,10 +98,14 @@ describe('', () => {
         computers.pageActions.clickShoppingCartLink().click();
         computers.pageActions.clickTermsOfServiceLink().click();
         computers.pageActions.clickCheckOutBtn().click();
-        cy.checkoutAsGuest() 
+        cy.registeredUserCheckout()
     });
 
     it('Lenovo Thinkpad Carbon Laptop', () => {
+        cy.visit(baseUrl);
+        computers.pageActions.clickComputersLink().click({ force: true })
+        computers.pageActions.clickLaptopsLink().click({ force: true })
+        cy.customerLogin()
         cy.addToCart().eq(5).click();
         cy.selectValueByDataAttr("1054", "1206");
         cy.selectValueByDataAttr("1055", "1213");
@@ -99,6 +117,7 @@ describe('', () => {
         computers.pageActions.clickShoppingCartLink().click();
         computers.pageActions.clickTermsOfServiceLink().click();
         computers.pageActions.clickCheckOutBtn().click();
-        cy.checkoutAsGuest() 
+        cy.registeredUserCheckout()
     });
+    
 });
