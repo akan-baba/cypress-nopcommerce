@@ -1,0 +1,56 @@
+import { Environment } from "../../../support/utils/environs";
+import {Clothing} from "../../../support/pages/apparel/men&womensClothing"
+const baseUrl = Environment.getBaseUrl();
+const clothing = new Clothing();
+
+describe('', () => {
+    it('Weaver Black Suede', () => {
+        cy.visit(baseUrl);
+        cy.customerLogin()
+        clothing.pageActions.clickAppareLink().click({force: true})
+        clothing.pageActions.clickMenShoesLink().click({force: true})
+        cy.addToCart().eq(0).click()
+        cy.selectValueByDataAttr("1059", "1225");
+        cy.selectRadio('Black').click()
+        cy.addToCart().eq(0).click()
+        cy.get('#product_enteredQuantity_53').clear().type('10')
+        clothing.pageActions.clickShoppingCartLink().click({force: true})
+        clothing.pageActions.clickTermsOfServiceLink().click()
+        clothing.pageActions.clickCheckOutBtn().click()
+        cy.registeredUserCheckout()
+       
+
+    });
+
+    it('Leather Wide Fit Brogue Boots', () => {
+        cy.visit(baseUrl);
+        cy.customerLogin()
+        clothing.pageActions.clickAppareLink().click({force: true})
+        clothing.pageActions.clickMenShoesLink().click({force: true})
+        cy.addToCart().eq(1).click()
+        cy.selectValueByDataAttr("1062", "1241");
+        cy.selectRadio('Black').click()
+        cy.addToCart().eq(0).click()
+        cy.get('#product_enteredQuantity_54').clear().type('10')
+        clothing.pageActions.clickShoppingCartLink().click({force: true})
+        clothing.pageActions.clickTermsOfServiceLink().click()
+        clothing.pageActions.clickCheckOutBtn().click()
+        cy.registeredUserCheckout() 
+    });
+
+    it('Bruno Marc Mens Oxfords Shoes Mens Lace-ups', () => {
+        cy.visit(baseUrl);
+        cy.customerLogin()
+        clothing.pageActions.clickAppareLink().click({force: true})
+        clothing.pageActions.clickMenShoesLink().click({force: true})
+        cy.addToCart().eq(2).click()
+        cy.selectValueByDataAttr("1064", "1251");
+        cy.selectRadio('Black').click()
+        cy.addToCart().eq(0).click()
+        cy.get('#product_enteredQuantity_55').clear().type('10')
+        clothing.pageActions.clickShoppingCartLink().click({force: true})
+        clothing.pageActions.clickTermsOfServiceLink().click()
+        clothing.pageActions.clickCheckOutBtn().click()
+        cy.registeredUserCheckout()
+    });
+});
