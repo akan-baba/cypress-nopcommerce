@@ -18,7 +18,7 @@ describe('Registered user shopping basket', () => {
         cy.selectValueByDataAttr("24", "94");
         cy.selectValueByDataAttr("25", "99");
         cy.selectRadio('Windows 10').click();
-        cy.get('#product_enteredQuantity_2').clear().type('300')
+        cy.get('#product_enteredQuantity_2').clear().type('1300')
         cy.addToCart().eq(0).click()
         computers.pageActions.clickShoppingCartLink().click();
         computers.pageActions.clickTermsOfServiceLink().click();

@@ -55,7 +55,7 @@ describe('Laptop Basket', () => {
         cy.selectValueByDataAttr("1041", "1157");
         cy.selectValueByDataAttr("1042", "1162");
         cy.selectRadio('Windows 11').click();
-        cy.get('#product_enteredQuantity_6').clear().type('500')
+        cy.get('#product_enteredQuantity_6').clear().type('1500')
         cy.addToCart().eq(0).click()
         computers.pageActions.clickShoppingCartLink().click();
         computers.pageActions.clickTermsOfServiceLink().click();
