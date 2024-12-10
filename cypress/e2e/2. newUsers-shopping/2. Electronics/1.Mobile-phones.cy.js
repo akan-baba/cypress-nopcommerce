@@ -1,13 +1,13 @@
 import { Environment } from "../../../support/utils/environs";
-import {MobilePhone} from "../../../support/pages/electronics/mobilePhone"
+import {Electronics} from "../../../support/pages/electronics/mobilePhone&tv"
 const baseUrl = Environment.getBaseUrl();
-const mobilePhone = new MobilePhone();
+const electronics = new Electronics();
 
 
 describe('Mobile Phones', () => {
     beforeEach(() => {
         cy.visit(baseUrl);
-        mobilePhone.pageActions.clickElectonicsLink().click({force: true})
+        electronics.pageActions.clickElectonicsLink().click({force: true})
         cy.linkText().contains('Mobile Phones').click({force: true});
         
     });
@@ -18,9 +18,9 @@ describe('Mobile Phones', () => {
         cy.selectRadio('Pay monthly').click();
         cy.get('#product_enteredQuantity_19').type('750')
         cy.addToCart().eq(0).click()
-        mobilePhone.pageActions.clickShoppingCartLink().click();
-        mobilePhone.pageActions.clickTermsOfServiceLink().click();
-        mobilePhone.pageActions.clickCheckOutBtn().click();
+        electronics.pageActions.clickShoppingCartLink().click();
+        electronics.pageActions.clickTermsOfServiceLink().click();
+        electronics.pageActions.clickCheckOutBtn().click();
         cy.checkoutAsGuest()
 
     });
@@ -31,9 +31,9 @@ describe('Mobile Phones', () => {
         cy.selectRadio('Pay monthly').click();
         cy.get('#product_enteredQuantity_18').type('350')
         cy.addToCart().eq(0).click()
-        mobilePhone.pageActions.clickShoppingCartLink().click();
-        mobilePhone.pageActions.clickTermsOfServiceLink().click();
-        mobilePhone.pageActions.clickCheckOutBtn().click();
+        electronics.pageActions.clickShoppingCartLink().click();
+        electronics.pageActions.clickTermsOfServiceLink().click();
+        electronics.pageActions.clickCheckOutBtn().click();
         cy.checkoutAsGuest()
     });
 
@@ -44,9 +44,9 @@ describe('Mobile Phones', () => {
         cy.selectRadio('Silver').click()
         cy.get('#product_enteredQuantity_52').type('620')
         cy.addToCart().eq(0).click()
-        mobilePhone.pageActions.clickShoppingCartLink().click();
-        mobilePhone.pageActions.clickTermsOfServiceLink().click({force: true});
-        mobilePhone.pageActions.clickCheckOutBtn().click();
+        electronics.pageActions.clickShoppingCartLink().click();
+        electronics.pageActions.clickTermsOfServiceLink().click({force: true});
+        electronics.pageActions.clickCheckOutBtn().click();
         cy.checkoutAsGuest()
     });
 });
