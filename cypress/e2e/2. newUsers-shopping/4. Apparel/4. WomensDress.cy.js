@@ -13,8 +13,9 @@ describe('Womens dress basket', () => {
         cy.addToCart().eq(0).click()
         cy.selectRadio('12').click()
         cy.selectRadio('Black').click()
-        cy.addToCart().eq(0).click()
+        
         cy.get('#product_enteredQuantity_60').clear().type('10')
+        cy.addToCart().eq(0).click()
         clothing.pageActions.clickShoppingCartLink().click({force: true})
         clothing.pageActions.clickTermsOfServiceLink().click()
         clothing.pageActions.clickCheckOutBtn().click()
@@ -28,8 +29,9 @@ describe('Womens dress basket', () => {
         cy.addToCart().eq(1).click()
         cy.selectRadio('18').click()
         cy.selectRadio('White').click()
-        cy.addToCart().eq(0).click()
+        
         cy.get('#product_enteredQuantity_61').clear().type('10')
+        cy.addToCart().eq(0).click()
         clothing.pageActions.clickShoppingCartLink().click({force: true})
         clothing.pageActions.clickTermsOfServiceLink().click()
         clothing.pageActions.clickCheckOutBtn().click()
@@ -43,8 +45,9 @@ describe('Womens dress basket', () => {
         cy.addToCart().eq(2).click()
         cy.selectRadio('10').click()
         cy.selectRadio('Pink').click()
-        cy.addToCart().eq(0).click()
+        
         cy.get('#product_enteredQuantity_62').clear().type('10')
+        cy.addToCart().eq(0).click()
         clothing.pageActions.clickShoppingCartLink().click({force: true})
         clothing.pageActions.clickTermsOfServiceLink().click()
         clothing.pageActions.clickCheckOutBtn().click()

@@ -1,7 +1,7 @@
 import { Environment } from "../../../support/utils/environs";
-import {MobilePhone} from "../../../support/pages/electronics/mobilePhone"
+import {Electronics} from "../../../support/pages/electronics/mobilePhone&tv"
 const baseUrl = Environment.getBaseUrl();
-const mobilePhone = new MobilePhone();
+const mobilePhone = new Electronics();
 
 
 describe('Mobile phone basket', () => {
