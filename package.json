@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:mochawesome": "npx cypress run && npx mochawesome-merge cypress/mochawesome-report/*.json > mochawesome-merged.json && npx mochawesome-report-generator mochawesome-merged.json && npx open-cli mochawesome-report/mochawesome.html",
-    "merge:mochawesome": "npx mochawesome-merge cypress/mochawesome-report/*.json > mochawesome-merged.json && npx mochawesome-report-generator mochawesome-merged.json",
+    
     "cypress:run": "npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=staging && npx cypress run --env ENV=qa && npx cypress run --env ENV=production",
     "open:report": "npx open-cli mochawesome-report/mochawesome.html",
     "cypress:open": "npx cypress open --env ENV=production"

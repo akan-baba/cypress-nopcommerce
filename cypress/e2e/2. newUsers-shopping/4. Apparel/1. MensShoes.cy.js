@@ -13,7 +13,7 @@ describe('Mens Shoes', () => {
         cy.addToCart().eq(0).click()
         cy.selectValueByDataAttr("1059", "1225");
         cy.selectRadio('Black').click()
-        cy.get('#product_enteredQuantity_53').clear().type('10')
+        cy.get('#product_enteredQuantity_53').clear().type('20')
         cy.addToCart().eq(0).click()
         clothing.pageActions.clickShoppingCartLink().click({force: true})
         clothing.pageActions.clickTermsOfServiceLink().click()
@@ -29,7 +29,7 @@ describe('Mens Shoes', () => {
         cy.selectValueByDataAttr("1062", "1241");
         cy.selectRadio('Black').click()
        
-        cy.get('#product_enteredQuantity_54').clear().type('10')
+        cy.get('#product_enteredQuantity_54').clear().type('20')
         cy.addToCart().eq(0).click()
         clothing.pageActions.clickShoppingCartLink().click({force: true})
         clothing.pageActions.clickTermsOfServiceLink().click()
@@ -45,7 +45,7 @@ describe('Mens Shoes', () => {
         cy.selectValueByDataAttr("1064", "1255");
         cy.selectRadio('Black').click()
         
-        cy.get('#product_enteredQuantity_55').clear().type('10')
+        cy.get('#product_enteredQuantity_55').clear().type('20')
         cy.addToCart().eq(0).click()
         clothing.pageActions.clickShoppingCartLink().click({force: true})
         clothing.pageActions.clickTermsOfServiceLink().click()

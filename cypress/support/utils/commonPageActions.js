@@ -47,7 +47,7 @@
     cy.get('#BillingNewAddress_PhoneNumber').type('01612251085');
     cy.get("button[onclick='Billing.save()']").click();
     cy.get('.button-1.shipping-method-next-step-button').click();
-    cy.get('#paymentmethod_1').click();
+    cy.get('#paymentmethod_2').click();
     cy.get("button[class='button-1 payment-method-next-step-button']").click();;
     cy.creditCard()
     cy.get('.button-1.confirm-order-next-step-button').click();
