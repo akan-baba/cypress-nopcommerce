@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    
-    "cypress:run": "npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=staging && npx cypress run --env ENV=qa && npx cypress run --env ENV=production",
+    "cypress:run": "npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=production && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=dev && npx cypress run --env ENV=staging && npx cypress run --env ENV=qa && npx cypress run --env ENV=production",
     "open:report": "npx open-cli mochawesome-report/mochawesome.html",
     "cypress:open": "npx cypress open --env ENV=production"
   },
@@ -14,7 +13,7 @@
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
     "cross-env": "^7.0.3",
-    "cypress": "^13.15.2",
+    "cypress": "^13.17.0",
     "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-multi-reporters": "^2.0.4",
     "junit-reporter": "^0.0.2",

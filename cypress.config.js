@@ -8,11 +8,13 @@ module.exports = defineConfig({
       require("cypress-mochawesome-reporter/plugin")(on);
       return config;
     },
-    
+    pageLoadTimeout: 16000,
+    experimentalRunAllSpecs:true,
     baseUrl: 'http://192.168.1.201:8085/',
     retries: {
       runMode: 2, // Retry failing tests twice in headless mode
       openMode: 0, // No retries in interactive mode
+      
     },
     reporter: "cypress-mochawesome-reporter",
     reporterOptions: {
