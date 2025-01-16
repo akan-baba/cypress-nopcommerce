@@ -7,6 +7,7 @@ const jewellery = new Jewellery();
 describe('Womens Rings', () => {
 
     it('Perfect Fit 9ct Yellow Gold 0.33ct Diamond Cluster Bridal Set', () => {
+        
         cy.visit(baseUrl);
         jewellery.pageAction.clickJewelleryLink().click({force: true})
         cy.linkText().contains('Womens Ring').click({force: true})
@@ -17,10 +18,12 @@ describe('Womens Rings', () => {
         jewellery.pageAction.clickShoppingCartLink().click();
         jewellery.pageAction.clickTermsOfServiceLink().click();
         jewellery.pageAction.clickCheckOutBtn().click();
-        cy.checkoutAsGuest() 
+        cy.checkoutAsGuest()
+        
     });
 
     it('9ct Yellow Gold Double Row 0.33ct Diamond Eternity Ring', () => {
+        
         cy.visit(baseUrl);
         jewellery.pageAction.clickJewelleryLink().click({force: true})
         cy.linkText().contains('Womens Ring').click({force: true})
@@ -31,10 +34,12 @@ describe('Womens Rings', () => {
         jewellery.pageAction.clickShoppingCartLink().click();
         jewellery.pageAction.clickTermsOfServiceLink().click();
         jewellery.pageAction.clickCheckOutBtn().click();
-        cy.checkoutAsGuest()   
+        cy.checkoutAsGuest() 
+       
     });
 
     it('9ct White Gold 0.33ct Diamond Illusion Halo Solitaire Ring', () => {
+        
         cy.visit(baseUrl);
         jewellery.pageAction.clickJewelleryLink().click({force: true})
         cy.linkText().contains('Womens Ring').click({force: true})
@@ -46,6 +51,7 @@ describe('Womens Rings', () => {
         jewellery.pageAction.clickTermsOfServiceLink().click();
         jewellery.pageAction.clickCheckOutBtn().click();
         cy.checkoutAsGuest() 
+       
     });
     
 });

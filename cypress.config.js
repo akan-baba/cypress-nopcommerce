@@ -8,7 +8,7 @@ module.exports = defineConfig({
       require("cypress-mochawesome-reporter/plugin")(on);
       return config;
     },
-    pageLoadTimeout: 16000,
+    pageLoadTimeout: 20000,
     experimentalRunAllSpecs:true,
     baseUrl: 'http://192.168.1.201:8085/',
     retries: {

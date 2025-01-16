@@ -12,7 +12,7 @@ describe('Mens Ring', () => {
     cy.linkText().contains('Mens Ring').click({force: true})
     cy.addToCart().eq(0).click()
     cy.selectRadio('Size P').click()
-    cy.get('#product_enteredQuantity_69').clear().type('10')
+    cy.get('#product_enteredQuantity_69').clear().type('1000')
     cy.addToCart().eq(0).click()
     jewellery.pageAction.clickShoppingCartLink().click();
     jewellery.pageAction.clickTermsOfServiceLink().click();
@@ -27,7 +27,7 @@ describe('Mens Ring', () => {
     cy.linkText().contains('Mens Ring').click({force: true})
     cy.addToCart().eq(1).click()
     cy.selectRadio('Size Q').click()
-    cy.get('#product_enteredQuantity_70').clear().type('10')
+    cy.get('#product_enteredQuantity_70').clear().type('1000')
     cy.addToCart().eq(0).click()
     jewellery.pageAction.clickShoppingCartLink().click();
     jewellery.pageAction.clickTermsOfServiceLink().click();
@@ -42,7 +42,7 @@ describe('Mens Ring', () => {
     cy.linkText().contains('Mens Ring').click({force: true})
     cy.addToCart().eq(2).click()
     cy.selectRadio('Size R').click()
-    cy.get('#product_enteredQuantity_71').clear().type('100')
+    cy.get('#product_enteredQuantity_71').clear().type('10000')
     cy.addToCart().eq(0).click()
     jewellery.pageAction.clickShoppingCartLink().click();
     jewellery.pageAction.clickTermsOfServiceLink().click();
